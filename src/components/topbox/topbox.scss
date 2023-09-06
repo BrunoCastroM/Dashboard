@@ -1,14 +1,20 @@
+@import "../../styles/responsive.scss";
+
 .top_box {
   h1 {
     margin-bottom: 20px;
+
+    @include xxl {
+      font-size: 24px;
+    }
   }
 
   .list {
     .list_item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
       .user {
         display: flex;
         gap: 20px;
@@ -18,11 +24,20 @@
           height: 40px;
           border-radius: 50%;
           object-fit: cover;
+
+          @include xxl {
+            display: none;
+          }
+
+          @include lg {
+            display: none;
+          }
         }
+
         .user_texts {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
 
           .username {
             font-size: 14px;
@@ -30,6 +45,14 @@
           }
           .email {
             font-size: 12px;
+
+            @include xxl {
+              display: none;
+            }
+
+            @include lg {
+              display: none;
+            }
           }
         }
       }
